@@ -1,4 +1,4 @@
-package kr.co.acomp.hello.vo;
+package kr.co.acomp.hello;
 
 public class Article {
 	private int articleId;
@@ -35,11 +35,12 @@ public class Article {
 		return "Article [articleId=" + articleId + ", author=" + author + ", title=" + title + ", content=" + content
 				+ "]";
 	}
-	public Article(int i, String string, String string2, String string3) {
-		
-	}
-	public Article() {
-		// TODO Auto-generated constructor stub
+	public Article(int articleId, String author, String title, String content) {
+		super();
+		this.articleId = articleId;
+		this.author = author;
+		this.title = title;
+		this.content = content;
 	}
 	
 }
