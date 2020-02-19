@@ -3,14 +3,13 @@ package kr.co.acomp.hello;
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-<<<<<<< HEAD
+
 import kr.co.acomp.hello.dao.HelloDAO;
 import kr.co.acomp.hello.service.BbsService;
 import kr.co.acomp.hello.service.HelloService;
 import kr.co.acomp.hello.vo.Article;
 
-=======
->>>>>>> refs/remotes/origin/master
+
 public class HelloMain {
 
 	public static void main(String[] args) {
@@ -25,7 +24,7 @@ public class HelloMain {
 		System.out.println(result);     
 		
 		BbsService ser = ctx.getBean("bbsService", BbsService.class);
-		ser.regisetArticle(new Article(result, null, null, null));
+		ser.registArticle(new Article(result, null, null, null));
 		
 	}
 

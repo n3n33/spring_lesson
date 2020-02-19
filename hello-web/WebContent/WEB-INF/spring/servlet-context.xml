@@ -7,7 +7,11 @@
 		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
 
-	<context:component-scan base-package="kr.co.acomp.hello"></context:component-scan>
+	<context:component-scan base-package="kr.co.acomp.hello" use-default-filters="false">
+		<context:exclude-filter type="annotation" 
+		expression="org.springframework.streotype.Controller"/>
+	</context:component-scan>
+	
 	<mvc:annotation-driven/>
 	
 	<mvc:resources location="/WEB-INF/resources/" mapping="/resource/**"/>
@@ -22,4 +26,6 @@
 		<property name="prefix" value="/WEB-INF/views/"/>
 		<property name="suffix" value=".jsp"/>
 	</bean>
+	
+
 </beans>
